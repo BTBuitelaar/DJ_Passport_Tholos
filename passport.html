@@ -45,12 +45,6 @@ flex-direction: column;
 align-items: center;
 }
 
-.passport-logo {
-width: 260px;
-height: auto;
-margin-bottom: 14px;
-}
-
 .header-video-wrapper {
 width: 100vw;
 position: relative;
@@ -60,6 +54,9 @@ margin-bottom: 32px;
 overflow: hidden;
 line-height: 0;
 max-height: 220px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .header-video-wrapper video {
@@ -73,12 +70,25 @@ user-select: none;
 -webkit-user-select: none;
 }
 
+.passport-logo-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 170px;
+height: auto;
+z-index: 2;
+}
+
 @media (max-width: 480px) {
 .header-video-wrapper {
 max-height: 150px;
 }
 .header-video-wrapper video {
 max-height: 150px;
+}
+.passport-logo-overlay {
+width: 120px;
 }
 }
 
@@ -163,12 +173,12 @@ letter-spacing: 1px;
 <div class="passport">
 
 <div class="passport-header">
-<img src="doric-logo-text.png" alt="Doric Jewelry" class="passport-logo">
 
 <div class="header-video-wrapper">
 <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
 <source src="passport-header-video.mp4" type="video/mp4">
 </video>
+<img src="doric-logo-text.png" alt="Doric Jewelry" class="passport-logo-overlay">
 </div>
 
 <div class="divider"></div>
