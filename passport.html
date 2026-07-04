@@ -15,9 +15,9 @@ body {
 background: #ffffff;
 min-height: 100vh;
 display: flex;
-justify-content: center;
-align-items: flex-start;
-padding: 60px 24px 80px;
+flex-direction: column;
+align-items: center;
+padding: 0 24px 80px;
 font-family: 'Georgia', serif;
 animation: fadeIn 1s ease-in;
 }
@@ -25,24 +25,6 @@ animation: fadeIn 1s ease-in;
 @keyframes fadeIn {
 from { opacity: 0; }
 to { opacity: 1; }
-}
-
-.passport {
-width: 100%;
-max-width: 480px;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 0;
-}
-
-.passport-header {
-width: 100%;
-text-align: center;
-margin-bottom: 32px;
-display: flex;
-flex-direction: column;
-align-items: center;
 }
 
 .header-video-wrapper {
@@ -75,7 +57,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-width: 170px;
+width: 340px;
 height: auto;
 z-index: 2;
 }
@@ -88,8 +70,26 @@ max-height: 150px;
 max-height: 150px;
 }
 .passport-logo-overlay {
-width: 120px;
+width: 240px;
 }
+}
+
+.passport {
+width: 100%;
+max-width: 480px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0;
+}
+
+.passport-header {
+width: 100%;
+text-align: center;
+margin-bottom: 32px;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .divider {
@@ -170,9 +170,6 @@ letter-spacing: 1px;
 </style>
 </head>
 <body>
-<div class="passport">
-
-<div class="passport-header">
 
 <div class="header-video-wrapper">
 <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
@@ -181,8 +178,10 @@ letter-spacing: 1px;
 <img src="doric-logo-text.png" alt="Doric Jewelry" class="passport-logo-overlay">
 </div>
 
-<div class="divider"></div>
+<div class="passport">
 
+<div class="passport-header">
+<div class="divider"></div>
 <h1 class="passport-title">Jewelry Passport</h1>
 </div>
 
